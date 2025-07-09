@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", () => {
     // Effet de scroll sur la navbar
-    if (window.scrollY > 50) {
+    if (window.scrollY > 10) {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled");
