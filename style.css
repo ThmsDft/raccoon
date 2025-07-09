@@ -470,6 +470,9 @@ footer .logo img {
 }
 
 @media (max-width: 660px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
 
   .logos-container img {
     max-height: 80px;
@@ -478,6 +481,9 @@ footer .logo img {
 }
 
 @media (max-width: 560px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
 
   .logos-container img {
     max-height: 50px;
