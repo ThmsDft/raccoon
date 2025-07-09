@@ -425,6 +425,10 @@ footer .logo img {
     display: block; /* On affiche le bouton burger sur mobile */
   }
 
+  .nav-links {
+    display: none;
+  }
+
   .gallery-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
