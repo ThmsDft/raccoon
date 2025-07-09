@@ -345,7 +345,7 @@ footer {
 }
 
 footer span {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 footer .logo {
@@ -354,7 +354,7 @@ footer .logo {
 }
 
 footer .logo img {
-  height: 80px;
+  height: 70px;
   width: auto;
 }
 
@@ -423,37 +423,6 @@ footer .logo img {
 
     .menu-burger {
     display: block; /* On affiche le bouton burger sur mobile */
-  }
-
-  .nav-links {
-    /* On transforme la liste de liens en un panneau qui sortira de l'écran */
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 80%; /* Occupe 80% de la largeur */
-    height: 100vh; /* Toute la hauteur de l'écran */
-    background-color: var(--card-background);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    
-    /* On le cache en dehors de l'écran par défaut */
-    transform: translateX(100%); 
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .nav-links.open {
-    /* Quand le menu a la classe "open", on le fait apparaître */
-    transform: translateX(0);
-  }
-
-  .nav-links li {
-    margin-left: 0; /* On retire la marge de gauche */
-  }
-
-  .nav-links a {
-    font-size: 1.5rem; /* On grossit le texte des liens pour une meilleure lisibilité */
   }
 
   .gallery-grid {
