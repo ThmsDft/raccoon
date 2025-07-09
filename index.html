@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raccoon - Transformez votre véhicule</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#" class="logo">
+          <img src="img/Raccoon-Logo.svg" alt="Logo Raccoon" />
+          <span>RACCOON</span>
+        </a>
+        <button class="menu-burger" aria-label="Ouvrir le menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#realisations">Réalisations</a></li>
+          <li><a href="#partners">Partenaires</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <h1>Transformez votre véhicule,<br />affirmez votre style.</h1>
+        </div>
+      </section>
+
+      <section id="services">
+        <h2>Nos Services</h2>
+        <p>
+          Découvrez nos prestations regroupées en deux pôles d'expertise<br />pour
+          sublimer et protéger votre véhicule.
+        </p>
+
+        <!-- Conteneur principal pour les deux catégories -->
+        <div class="categories-container">
+          <!-- Catégorie 1: Esthétique -->
+          <article class="service-category">
+            <div class="category-icon">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3>Esthétique & Personnalisation</h3>
+            <ul class="features-list">
+              <li><i class="fa-solid fa-check"></i>Covering Total</li>
+              <li><i class="fa-solid fa-check"></i>Covering Partiel</li>
+              <li><i class="fa-solid fa-check"></i>Vitres Teintées</li>
+            </ul>
+          </article>
+
+          <!-- Catégorie 2: Protection -->
+          <article class="service-category">
+            <div class="category-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Protection & Entretien</h3>
+            <ul class="features-list">
+              <li><i class="fa-solid fa-check"></i>Film de Protection PPF</li>
+              <li><i class="fa-solid fa-check"></i>Nettoyage Extérieur</li>
+              <li><i class="fa-solid fa-check"></i>Nettoyage Intérieur</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="realisations">
+        <h2>Nos Réalisations</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item item-1">
+            <img src="img/cov2.png" alt="covering jaune" />
+          </div>
+          <div class="gallery-item item-2">
+            <img src="img/cov3.png" alt="covering noir porsche" />
+          </div>
+          <div class="gallery-item item-3">
+            <img src="img/cov4.png" alt="covering rouge" />
+          </div>
+          <div class="gallery-item item-4">
+            <img src="img/cov6.png" alt="covering noir rétroviseur" />
+          </div>
+          <div class="gallery-item item-5">
+            <img src="img/cov7.png" alt="application film rouge" />
+          </div>
+        </div>
+      </section>
+
+      <section id="partners">
+        <h2>La Qualité Avant Tout</h2>
+        <p>
+          Nous ne travaillons qu'avec les leaders mondiaux du film adhésif.<br />C'est
+          votre garantie d'une finition parfaite et d'une durabilité
+          exceptionnelle.
+        </p>
+        <div class="logos-container">
+          <img src="img/3M_wordmark.svg" alt="Logo 3M" />
+          <img src="img/Avery_Dennison_logo.svg" alt="Logo Avery Dennison" />
+          <img src="img/mactac_logo.png" alt="Logo Mactac" />
+          <img src="img/hexis-logo.svg" alt="Logo Hexis" />
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contactez-nous</h2>
+        <p>
+          Prêt à donner une nouvelle vie à votre véhicule ?<br />Remplissez le
+          formulaire ci-dessous.
+        </p>
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              placeholder="Votre Nom"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Votre Email"
+              required
+            />
+          </div>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Votre Message (modèle du véhicule, projet...)"
+            required
+          ></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="logo">
+        <img src="img/Raccoon-Logo.svg" alt="Logo Raccoon" />
+        <span>RACCOON</span>
+      </div>
+    </footer>
+
+    <!-- Lightbox Structure (cachée par défaut) -->
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">×</span>
+      <img class="lightbox-content" id="lightbox-img" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
