@@ -156,7 +156,7 @@ h2::after {
 /* --- SERVICES SECTION (NOUVELLE VERSION) --- */
 .categories-container {
   display: flex;
-  gap: 10rem; /* Espace entre les deux colonnes */
+  gap: 5rem; /* Espace entre les deux colonnes */
   margin-top: 4rem; /* Espace sous le paragraphe principal */
   justify-content: center;
 }
@@ -461,6 +461,10 @@ footer .logo img {
   }
 
   .form-group {
+    flex-direction: column;
+  }
+
+   .categories-container {
     flex-direction: column;
   }
 }
