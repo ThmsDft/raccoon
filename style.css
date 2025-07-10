@@ -552,9 +552,6 @@ footer .logo img {
     pointer-events: none; /* Empêche de cliquer sur les liens quand le menu est caché */
     transform: translateY(-20px); /* Léger décalage pour l'animation */
 
-    /* C'est LA transition qui nous manquait ! */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-
     /* Centrage des liens */
     display: flex;
     flex-direction: column;
