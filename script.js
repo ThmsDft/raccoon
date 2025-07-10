@@ -66,4 +66,35 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Merci pour votre message ! Nous vous recontacterons bientôt.");
     contactForm.reset();
   });
+
+  // --- LOGIQUE DU MENU BURGER (NOUVELLE VERSION) ---
+  const menuBurger = document.querySelector(".menu-burger");
+  const navLinksContainer = document.querySelector(".nav-links");
+  const burgerIcon = menuBurger.querySelector("i");
+
+  const toggleMenu = () => {
+    // Ajoute une classe à la <nav> pour gérer l'état ouvert/fermé
+    nav.classList.toggle("menu-open");
+
+    // Change l'icône du burger
+    if (nav.classList.contains("menu-open")) {
+      burgerIcon.classList.remove("fa-bars");
+      burgerIcon.classList.add("fa-xmark");
+    } else {
+      burgerIcon.classList.remove("fa-xmark");
+      burgerIcon.classList.add("fa-bars");
+    }
+  };
+
+  // Écoute le clic sur le bouton du menu
+  menuBurger.addEventListener("click", toggleMenu);
+
+  // Écoute le clic sur chaque lien du menu pour le fermer
+  navLinksContainer.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (nav.classList.contains("menu-open")) {
+        toggleMenu();
+      }
+    });
+  });
 });
