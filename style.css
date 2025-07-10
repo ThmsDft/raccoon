@@ -601,14 +601,10 @@ footer .logo img {
   }
 
   /* Le reste de vos styles responsives... */
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
   .gallery-item {
     grid-column: auto;
     grid-row: auto;
-    height: 250px;
+    height: 200px;
   }
   .form-group {
     flex-direction: column;
