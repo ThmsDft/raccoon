@@ -154,6 +154,12 @@ h2::after {
 }
 
 /* --- SERVICES SECTION (NOUVELLE VERSION) --- */
+section#services{
+  background-color: #0a0a0a;
+  width: 100%;
+  max-width: none;
+}
+
 .categories-container {
   display: flex;
   gap: 5rem; /* Espace entre les deux colonnes */
