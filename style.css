@@ -48,15 +48,21 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-nav.scrolled,
-nav.menu-open {
-  height: 70px;
+nav.scrolled {
   background-color: rgba(100, 132, 163, 0.24);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   margin-top: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+nav.menu-open {
+  background-color: rgba(100, 132, 163, 0.24);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin-top: 20px;
 }
 
 .logo {
@@ -528,47 +534,70 @@ footer .logo img {
     z-index: 1010;
   }
 
-  /* On applique un fond à la nav quand le menu est ouvert ou quand on a scrollé */
-  nav .nav-links {
-    position: absolute;
-    top: 0; /* Se place juste en dessous de la nav */
+  nav.menu-open {
+    height: calc(100vh - 40px);
+  }
+
+  .nav-links {
+    position: fixed; /* Positionné par rapport à la fenêtre */
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 40px);
+    height: 100vh; /* Prend toute la hauteur de l'écran */
 
-    background-color: rgba(100, 131, 163, 0);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
+    /* Style du menu ouvert */
 
-    /* Organisation des liens */
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    gap: 3rem;
-    padding: 1.5rem 0;
-    transition: all 0.3s ease-in-out;
-  }
+    /* On cache le menu par défaut */
+    opacity: 0;
+    pointer-events: none; /* Empêche de cliquer sur les liens quand le menu est caché */
+    transform: translateY(-20px); /* Léger décalage pour l'animation */
 
-  nav.menu-open .nav-links {
-    background-color: rgba(100, 132, 163, 0.24);
+    /* C'est LA transition qui nous manquait ! */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    /* Centrage des liens */
     display: flex;
-    transition: all 0.3s ease-in-out;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
   }
 
-  /* Style des liens dans le menu mobile */
+  /* Quand la nav a la classe .menu-open, on montre les liens */
+  nav.menu-open .nav-links {
+    opacity: 1;
+    pointer-events: auto; /* On peut de nouveau cliquer */
+    transform: translateY(0);
+  }
+
   .nav-links li {
-    margin-left: 0;
-    width: 100%;
-    text-align: center;
+    margin-left: 0; /* Plus besoin de marge à gauche */
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transition-delay: 0.2s; /* Petit délai pour un effet escalonné */
+  }
+
+  /* Animation d'apparition des liens un par un */
+  nav.menu-open .nav-links li {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Délai d'animation pour chaque lien */
+  nav.menu-open .nav-links li:nth-child(2) {
+    transition-delay: 0.25s;
+  }
+  nav.menu-open .nav-links li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  nav.menu-open .nav-links li:nth-child(4) {
+    transition-delay: 0.35s;
   }
 
   .nav-links a {
-    font-size: 2.5rem;
-    padding: 0.5rem 0;
-    display: block; /* Pour que le lien prenne toute la largeur */
+    font-size: 3rem;
+    font-weight: 700;
   }
 
   /* Le reste de vos styles responsives... */
