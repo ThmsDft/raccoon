@@ -181,6 +181,11 @@ section#services > img {
   filter: brightness(80%);
 }
 
+section#services img#left {
+  left: 0;
+  height: 70%;
+}
+
 .categories-container {
   position: relative;
   display: flex;
@@ -292,6 +297,10 @@ section#services > img {
   background-color: var(--card-background);
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSJub25lIi8+PHBhdGggZD0iTS0xIDEgbDIgLTIgTSAwIDEwIGwxMCAtMTAgTSA5IDExIGwyIC0yIiBzdHJva2U9IiMyNTI1MjUiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==");
   max-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .logos-container {
@@ -550,8 +559,8 @@ footer .logo img {
 
   /* --- STYLES DU MENU DÉROULANT --- */
   nav {
-  align-items: start;
-}
+    align-items: start;
+  }
 
   .menu-burger {
     display: block; /* On affiche le bouton burger sur mobile */
@@ -634,4 +643,57 @@ footer .logo img {
     flex-direction: column;
     gap: 2rem; /* Réduire l'espace sur mobile */
   }
+}
+
+@media (max-width: 1200px) {
+  section#services img#left {
+    display: none;
+  }
+}
+
+#nuancier {
+  width: 15px;
+  height: 15px;
+  /* On le place plus bas dans la section pour un meilleur effet */
+  margin-top: 250px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+#circle {
+  min-height: 15px;
+  min-width: 15px;
+  background-color: grey;
+  position: relative;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px rgb(0, 0, 0);
+  border: solid rgba(0, 0, 0, 0.308) 1px;
+}
+
+.flap {
+  top: -8px;
+  left: -8px;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: rgb(9, 58, 87);
+  border-radius: 6px;
+  transform-origin: 16px 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.774);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transform: rotate(110deg); /* État initial "fermé" */
+}
+
+.flap p {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.flap img {
+  height: 35px;
 }
