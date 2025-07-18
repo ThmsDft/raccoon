@@ -549,6 +549,9 @@ footer .logo img {
   }
 
   /* --- STYLES DU MENU DÉROULANT --- */
+  nav {
+  align-items: start;
+}
 
   .menu-burger {
     display: block; /* On affiche le bouton burger sur mobile */
