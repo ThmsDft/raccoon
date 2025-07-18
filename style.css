@@ -149,7 +149,7 @@ h2::after {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("img/Raccoon-forest-9-16.avif");
+  background-image: url("img/Raccoon-forest.jpeg");
   background-size: cover;
   background-position: center;
   padding: 0 5%;
@@ -165,16 +165,28 @@ h2::after {
 
 /* --- SERVICES SECTION (NOUVELLE VERSION) --- */
 section#services {
+  position: relative;
   background-color: #0a0a0a;
   width: 100%;
   max-width: none;
 }
 
+section#services > img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 70%;
+  z-index: 1;
+  filter: brightness(80%);
+}
+
 .categories-container {
+  position: relative;
   display: flex;
   gap: 5rem; /* Espace entre les deux colonnes */
   margin-top: 4rem; /* Espace sous le paragraphe principal */
   justify-content: center;
+  z-index: 2;
 }
 
 .category-icon {
@@ -430,6 +442,10 @@ footer .logo img {
 
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
+  #hero {
+    background-image: url("img/Raccoon-forest-9-16.avif");
+  }
+
   h2 {
     font-size: 2rem;
   }
@@ -502,6 +518,10 @@ footer .logo img {
 
   .logos-container img {
     max-height: 50px;
+  }
+
+  section#services > img {
+    height: 45%;
   }
 }
 
