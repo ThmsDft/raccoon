@@ -303,6 +303,13 @@ section#services img#left {
   flex-direction: column;
 }
 
+#partners p:nth-last-child(2) {
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 60px;
+  font-size: 1.1rem;
+}
+
 .logos-container {
   display: flex;
   justify-content: space-between;
@@ -656,7 +663,7 @@ footer .logo img {
   height: 15px;
   /* On le place plus bas dans la section pour un meilleur effet */
   margin-top: 250px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   position: relative;
 }
 
@@ -696,4 +703,35 @@ footer .logo img {
 
 .flap img {
   height: 35px;
+}
+
+@media (max-width: 450px) {
+  #nuancier {
+    width: 10px;
+    height: 10px;
+    margin-top: 250px;
+    margin-bottom: 150px;
+  }
+
+  #circle {
+    min-height: 10px;
+    min-width: 10px;
+  }
+
+  .flap {
+    top: -8px;
+    left: -8px;
+    width: 180px;
+    height: 80px;
+    border-radius: 6px;
+    transform-origin: 16px 16px;
+  }
+
+  .flap p {
+    font-size: 16px;
+  }
+
+  .flap img {
+    height: 30px;
+  }
 }
